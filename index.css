@@ -70,7 +70,7 @@ margin-left: 90px;
 }
 
 .tarih-taburcu{
-    margin-left: 17px;
+    margin-left: 67px;
     }
 
 .p-tarih-yatis, .p-tarih-taburcu, .p-tutar{
@@ -91,4 +91,21 @@ margin-left: 90px;
     margin-top: 25px;
     margin-left: 26px;
     width: 147px;
+}
+
+@media (max-width: 420px){
+
+    .tarih-yatis{
+        margin-left: 60px;
+        }
+
+        .tarih-taburcu{
+            margin-left: 35px;
+            }
+
+            .gun-sayisi{
+                margin-top: 25px;
+                margin-left: 1px;
+                width: 140px;
+            }
 }
