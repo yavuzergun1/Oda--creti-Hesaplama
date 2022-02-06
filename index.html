@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css">
+	
+</head>
+<body>
+
+	<div class="container"> 
+
+	<h1>Oda Ücreti Hesaplama</h1>
+	
+	<div class="blok-container">
+	<label for="blok" class="blok">Blok Seçin</label>
+
+<select id="blok">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+</select>
+</div>
+
+<div class="oda-container">
+	<label for="oda" class="oda">Oda Seçin</label>
+
+<select id="oda">
+    <option value="812">812</option>
+    <option value="814">814</option>
+    <option value="816">816</option>
+    <option value="818">818</option>
+    <option value="820">820</option>
+    <option value="822">822</option>
+    
+</select>
+</div>
+<label for="" > Yatış Tarihi:
+<input type="date" class="tarih tarih-yatis"> <button class="yatis-submit" type="submit">Gönder</button>
+</label>
+<br>
+<label for=""> Taburcu Olma Tarihi:
+    <input type="date" class="tarih tarih-taburcu"> <button class="taburcu-submit" type="submit">Gönder</button>
+    </label>
+    <br>
+    <label for="">Kalınan Gün Sayısı: <input type="number" class="gun-sayisi"> <button class="kalinanGunSubmit" type="submit">Gönder</button>
+</label>
+
+<h2>Girilen Oda: <b class="odaNo"></b> </h2>
+<p class="secilenOdaTipi"> Seçilen Oda Tipi:<b class="odaTipi"></b></p>
+<p class="gunlukTutar">Günlük Oda Tutarı: <b class="gunlukTutarYaz"></b></p>
+<p class="p-tarih-yatis">Yatış Tarihi: <b class="p-tarih-yatis-yaz"></b></p>
+<p class="p-tarih-taburcu">Taburcu Olma Tarihi: <b class="p-tarih-taburcu-yaz"></b></p>
+<p class="p-tutar">Tutar: <b class="p-tutar-yaz"></b></p>
+
+
+
+
+	</div>
+
+	<script src="script.js"></script>
+	<script src="deneme.js"></script>
+	
+</body>
+</html>
