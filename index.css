@@ -47,7 +47,7 @@ h2{
     text-align: center;
 }
 
-.secilenOdaTipi, .gunlukTutar{
+.secilenOdaTipi, .gunlukTutar, .p-tarih-yatis, .p-tarih-taburcu, .p-kalinan-gun, .p-tutar{
     margin-top: 25px;
     color: aliceblue;
     font-size: 20px;
@@ -73,14 +73,9 @@ margin-left: 30px;
     margin-left: 67px;
     }
 
-.p-tarih-yatis, .p-tarih-taburcu, .p-tutar{
-    margin-top: 25px;
-    color: aliceblue;
-    font-size: 20px;
-    text-align:start;
-}
 
-.p-tarih-yatis-yaz, .p-tarih-taburcu-yaz, .p-tutar-yaz{
+
+.p-tarih-yatis-yaz, .p-tarih-taburcu-yaz, .p-tutar-yaz, .p-kalinan-gun-yaz{
     padding-left: 20px;
     font-size: 20px;
     text-align:start;

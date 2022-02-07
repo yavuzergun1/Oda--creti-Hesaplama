@@ -11,10 +11,10 @@ let yatisTarihi= document.querySelector(".tarih-yatis");
 let taburcuTarihi= document.querySelector(".tarih-taburcu");
 let yazilanYatisTarihi= document.querySelector(".p-tarih-yatis-yaz");
 let yazilanTaburcuTarihi= document.querySelector(".p-tarih-taburcu-yaz");
-let kalinanGunSayisi= document.querySelector(".gun-sayisi");
 let buttonSubmit= document.querySelector(".buttonSubmit");
-let buttonHesapla= document.querySelector(".hesapla")
-let yazTutar= document.querySelector(".p-tutar-yaz")
+let buttonHesapla= document.querySelector(".hesapla");
+let kalinanGunSayisi= document.querySelector(".p-kalinan-gun-yaz");
+let yazTutar= document.querySelector(".p-tutar-yaz");
 
 
 
@@ -23,6 +23,13 @@ buttonSubmit.addEventListener('click', yatisYaz);
 function yatisYaz(){
     yazilanYatisTarihi.textContent= yatisTarihi.value;
     yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
+
+    const date1 = new Date(`${yatisTarihi.value}`);
+    const date2 = new Date(`${taburcuTarihi.value}`);
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    kalinanGunSayisi.textContent= `${diffDays} Gün`
+
     girilenOda.textContent= `${secilenBlok.value}-${secilenOda.value}`;
     for (let i=0; i<ozelOdalar.length; i++){
         if (girilenOda.textContent == yariOzelOdalar[i]){
@@ -30,10 +37,8 @@ function yatisYaz(){
             gunlukTutarYaz.textContent= '49 TL'
             buttonHesapla.addEventListener('click', kalinanGunYaz);
     function kalinanGunYaz(){
-        console.log(`Kalınan Gün Sayısı: ${kalinanGunSayisi.value}`);
-        let tutar= kalinanGunSayisi.value*49;
+        let tutar= diffDays*49;
         yazTutar.textContent= `${tutar}TL`
-        // console.log(`Tutar: ${tutar}TL`);
         
         }
     }
@@ -59,26 +64,8 @@ function yatisYaz(){
                 }
         }
     }
-    // taburcuSubmit.addEventListener('click', taburcuYaz);
-    // function yatisYaz(){
-    //     yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
-    //     // console.log(taburcuTarihi.value);
-    // }
-}
-
-
-// ODA VE BLOK SEÇİM İŞLEMİ
-
-secilenOda.addEventListener('click', odaYaz);
-function odaYaz() {
-
-
 
 }
-
-// TARİH SEÇİM İŞLEMİ
-
-// yatisTarihi.addEventListener('click', yatisYaz);
 
 
 
