@@ -111,7 +111,20 @@ table{
 }
 @media (max-width: 420px){
    
+    .container{
+        width: 100%;
+        height: 1100px;
+       
+    }
 
+    h1{
+        font-size: 30px;
+        transform: translate(-15px);
+    }
+
+    h2{
+        font-size: 20px;
+    }
 
     .tarih-yatis{
         margin-left: 25px;
