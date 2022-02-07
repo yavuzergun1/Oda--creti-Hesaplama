@@ -37,33 +37,31 @@ function yatisYaz(){
         if (girilenOda.textContent == yariOzelOdalar[i]){
             odaTipi.textContent= 'YARI ÖZEL';
             gunlukTutarYaz.textContent= '49 TL'
-            buttonHesapla.addEventListener('click', kalinanGunYaz);
-    function kalinanGunYaz(){
+            
+   
         let tutar= diffDays*49;
         yazTutar.textContent= `${tutar}TL`
         
-        }
+        
     }
         if (girilenOda.textContent == ozelOdalar[i]){
             odaTipi.textContent= 'ÖZEL';
             gunlukTutarYaz.textContent= '99 TL'
-            buttonHesapla.addEventListener('click', kalinanGunYaz);
-            function kalinanGunYaz(){
+           
                 // console.log(`Kalınan Gün Sayısı: ${kalinanGunSayisi.value}`);
                 let tutar= diffDays*99;
                 yazTutar.textContent= `${tutar}TL`
                 // console.log(`Tutar: ${tutar}TL`);
                 
-                }
+                
         }
         if (girilenOda.textContent == genelOdalar[i]){
             odaTipi.textContent= 'GENEL ';
             gunlukTutarYaz.textContent= 'ÜCRETSİZ';
-            buttonHesapla.addEventListener('click', kalinanGunYaz);
-            function kalinanGunYaz(){
+            
                 yazTutar.textContent= "Ücretsiz"
                 
-                }
+                
         }
     }
    
