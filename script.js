@@ -21,15 +21,7 @@ let yazTutar= document.querySelector(".p-tutar-yaz");
 buttonSubmit.addEventListener('click', yatisYaz);
 
 function yatisYaz(){
-    yazilanYatisTarihi.textContent= yatisTarihi.value;
-    yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
-
-    const date1 = new Date(`${yatisTarihi.value}`);
-    const date2 = new Date(`${taburcuTarihi.value}`);
-    const diffTime = Math.abs(date2 - date1);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-    kalinanGunSayisi.textContent= `${diffDays} Gün`
-
+    
     girilenOda.textContent= `${secilenBlok.value}-${secilenOda.value}`;
     for (let i=0; i<ozelOdalar.length; i++){
         if (girilenOda.textContent == yariOzelOdalar[i]){
@@ -64,6 +56,14 @@ function yatisYaz(){
                 }
         }
     }
+    yazilanYatisTarihi.textContent= yatisTarihi.value;
+    yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
+
+    const date1 = new Date(`${yatisTarihi.value}`);
+    const date2 = new Date(`${taburcuTarihi.value}`);
+    const diffTime = Math.abs(date2 - date1);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    kalinanGunSayisi.textContent= `${diffDays} Gün`
 
 }
 
