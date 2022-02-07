@@ -59,7 +59,7 @@ function yatisYaz(){
             odaTipi.textContent= 'GENEL ';
             gunlukTutarYaz.textContent= 'ÜCRETSİZ';
             
-                yazTutar.textContent= "Ücretsiz"
+                yazTutar.textContent= "0 TL"
                 
                 
         }
