@@ -59,7 +59,7 @@ function yatisYaz(){
         if (girilenOda.textContent == genelOdalar[i]){
             odaTipi.textContent= 'GENEL ';
             gunlukTutarYaz.textContent= 'ÜCRETSİZ';
-            buttonSubmit.addEventListener('click', kalinanGunYaz);
+            buttonHesapla.addEventListener('click', kalinanGunYaz);
             function kalinanGunYaz(){
                 yazTutar.textContent= "Ücretsiz"
                 
