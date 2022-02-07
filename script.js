@@ -23,6 +23,16 @@ buttonSubmit.addEventListener('click', yatisYaz);
 function yatisYaz(){
     
     girilenOda.textContent= `${secilenBlok.value}-${secilenOda.value}`;
+
+    yazilanYatisTarihi.textContent= yatisTarihi.value;
+    yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
+
+    let date1 = new Date(`${yatisTarihi.value}`);
+    let date2 = new Date(`${taburcuTarihi.value}`);
+    let diffTime = Math.abs(date2 - date1);
+    let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+    kalinanGunSayisi.textContent= `${diffDays} Gün`
+
     for (let i=0; i<ozelOdalar.length; i++){
         if (girilenOda.textContent == yariOzelOdalar[i]){
             odaTipi.textContent= 'YARI ÖZEL';
@@ -37,10 +47,10 @@ function yatisYaz(){
         if (girilenOda.textContent == ozelOdalar[i]){
             odaTipi.textContent= 'ÖZEL';
             gunlukTutarYaz.textContent= '99 TL'
-            buttonSubmit.addEventListener('click', kalinanGunYaz);
+            buttonHesapla.addEventListener('click', kalinanGunYaz);
             function kalinanGunYaz(){
                 // console.log(`Kalınan Gün Sayısı: ${kalinanGunSayisi.value}`);
-                let tutar= kalinanGunSayisi.value*99;
+                let tutar= diffDays*99;
                 yazTutar.textContent= `${tutar}TL`
                 // console.log(`Tutar: ${tutar}TL`);
                 
@@ -56,14 +66,7 @@ function yatisYaz(){
                 }
         }
     }
-    yazilanYatisTarihi.textContent= yatisTarihi.value;
-    yazilanTaburcuTarihi.textContent= taburcuTarihi.value;
-
-    const date1 = new Date(`${yatisTarihi.value}`);
-    const date2 = new Date(`${taburcuTarihi.value}`);
-    const diffTime = Math.abs(date2 - date1);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-    kalinanGunSayisi.textContent= `${diffDays} Gün`
+   
 
 }
 
