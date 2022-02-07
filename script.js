@@ -19,6 +19,7 @@ let currentMonth= today.getMonth();
 let currentDay= today.getDay();
 let currentYesterday= today.getDay()-1;
 
+// current day added
 if (currentDay < 10) { currentDay = '0' + currentDay; };
 if (currentYesterday < 10) { currentYesterday = '0' + currentYesterday; };
 if (currentMonth < 10) { currentMonth = '0' + currentMonth; };
@@ -32,7 +33,7 @@ yatisTarihi.setAttribute('value', dun);
 taburcuTarihi.setAttribute('value', bugun);
 
 
-
+//  calculation:
 buttonSubmit.addEventListener('click', yatisYaz);
 
 function yatisYaz(){
@@ -52,10 +53,8 @@ function yatisYaz(){
         if (girilenOda.textContent == yariOzelOdalar[i]){
             odaTipi.textContent= 'YARI ÖZEL';
             gunlukTutarYaz.textContent= '49 TL'
-            
-   
-        let tutar= diffDays*49;
-        yazTutar.textContent= `${tutar}TL`
+            let tutar= diffDays*49;
+            yazTutar.textContent= `${tutar}TL`
         
         
     }
@@ -64,21 +63,16 @@ function yatisYaz(){
             gunlukTutarYaz.textContent= '99 TL'
            
                 let tutar= diffDays*99;
-                yazTutar.textContent= `${tutar}TL`
-                
-                
+                yazTutar.textContent= `${tutar}TL`     
         }
+
         if (girilenOda.textContent == genelOdalar[i]){
             odaTipi.textContent= 'GENEL ';
             gunlukTutarYaz.textContent= 'ÜCRETSİZ';
             
-                yazTutar.textContent= "0 TL"
-                
-                
+                yazTutar.textContent= "0 TL"   
         }
     }
-   
-
 }
 
 
