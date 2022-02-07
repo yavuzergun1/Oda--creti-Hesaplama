@@ -12,9 +12,10 @@ let taburcuTarihi= document.querySelector(".tarih-taburcu");
 let yazilanYatisTarihi= document.querySelector(".p-tarih-yatis-yaz");
 let yazilanTaburcuTarihi= document.querySelector(".p-tarih-taburcu-yaz");
 let buttonSubmit= document.querySelector(".buttonSubmit");
-let buttonHesapla= document.querySelector(".hesapla");
 let kalinanGunSayisi= document.querySelector(".p-kalinan-gun-yaz");
 let yazTutar= document.querySelector(".p-tutar-yaz");
+let bugun= `${new Date().getDay()}.${new Date().getMonth()}.${new Date().getFullYear()}`;
+console.log(`Bugünün tarihi: ${bugun}`);
 
 
 
@@ -48,10 +49,8 @@ function yatisYaz(){
             odaTipi.textContent= 'ÖZEL';
             gunlukTutarYaz.textContent= '99 TL'
            
-                // console.log(`Kalınan Gün Sayısı: ${kalinanGunSayisi.value}`);
                 let tutar= diffDays*99;
                 yazTutar.textContent= `${tutar}TL`
-                // console.log(`Tutar: ${tutar}TL`);
                 
                 
         }
