@@ -14,8 +14,22 @@ let yazilanTaburcuTarihi= document.querySelector(".p-tarih-taburcu-yaz");
 let buttonSubmit= document.querySelector(".buttonSubmit");
 let kalinanGunSayisi= document.querySelector(".p-kalinan-gun-yaz");
 let yazTutar= document.querySelector(".p-tutar-yaz");
-let bugun= `${new Date().getDay()}.${new Date().getMonth()}.${new Date().getFullYear()}`;
+let today= new Date();
+let currentMonth= today.getMonth();
+let currentDay= today.getDay();
+let currentYesterday= today.getDay()-1;
+
+if (currentDay < 10) { currentDay = '0' + currentDay; };
+if (currentYesterday < 10) { currentYesterday = '0' + currentYesterday; };
+if (currentMonth < 10) { currentMonth = '0' + currentMonth; };
+
+let bugun= `${today.getFullYear()}-${currentMonth}-${currentDay}`;
+let dun= `${new Date().getFullYear()}-${currentMonth}-${currentYesterday}`;
+console.log(`Dünün Tarihi: ${dun}`);
 console.log(`Bugünün tarihi: ${bugun}`);
+
+yatisTarihi.setAttribute('value', dun);
+taburcuTarihi.setAttribute('value', bugun);
 
 
 
