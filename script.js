@@ -19,6 +19,7 @@ let yazTutar= document.querySelector(".p-tutar-yaz");
 let today= new Date();
 let currentMonth= today.getMonth();
 let currentDay= today.getDay();
+console.log(currentDay);
 let currentYesterday= today.getDay()-1;
 
 if (currentDay < 10) { currentDay = '0' + currentDay; };
@@ -55,10 +56,9 @@ function yatisYaz(){
             odaTipi.textContent= 'YARI ÖZEL';
             gunlukTutarYaz.textContent= '49 TL'
             let tutar= diffDays*49;
-            yazTutar.textContent= `${tutar}TL`
-        
-        
+            yazTutar.textContent= `${tutar}TL` 
     }
+    
         if (girilenOda.textContent == ozelOdalar[i]){
             odaTipi.textContent= 'ÖZEL';
             gunlukTutarYaz.textContent= '99 TL'
