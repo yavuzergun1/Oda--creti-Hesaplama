@@ -17,14 +17,15 @@ let yazTutar= document.querySelector(".p-tutar-yaz");
 
 // current day added
 let today= new Date();
-let currentMonth= today.getMonth();
-let currentDay= today.getDay();
+let currentMonth= today.getMonth()+1;
+let currentDay= today.getDate();
+console.log(currentMonth);
 console.log(currentDay);
-let currentYesterday= today.getDay()-1;
+let currentYesterday= currentDay-1;
 
-if (currentDay < 10) { currentDay = '0' + currentDay; };
-if (currentYesterday < 10) { currentYesterday = '0' + currentYesterday; };
-if (currentMonth < 10) { currentMonth = '0' + currentMonth; };
+if (currentDay < 10) { currentDay = '0' + currentDay};
+if (currentYesterday < 10) { currentYesterday = '0' + currentYesterday};
+if (currentMonth < 10) { currentMonth = '0' + currentMonth};
 
 let bugun= `${today.getFullYear()}-${currentMonth}-${currentDay}`;
 let dun= `${new Date().getFullYear()}-${currentMonth}-${currentYesterday}`;
